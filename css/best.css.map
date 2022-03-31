@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACZ,WAAW,EAAE,KAAK;CACnB",
+    "sources": [
+        "../sass/layout/best.scss"
+    ],
+    "names": [],
+    "file": "best.css"
+}
