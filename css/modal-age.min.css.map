@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,AAAC,CACZ,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,gBAAgB,CAAE,uBAAuB,CACzC,OAAO,CAAE,IAAI,CACb,QAAQ,CAAE,KAAK,CACf,GAAG,CAAE,CAAC,CACN,OAAO,CAAE,CAAC,CACX",
+    "sources": [
+        "../sass/layout/modal-age.scss"
+    ],
+    "names": [],
+    "file": "modal-age.min.css"
+}
