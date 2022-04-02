@@ -1,37 +1,87 @@
 .description-section {
-  padding-top: 133px;
-  padding-bottom: 48px;
+  padding-top: 54px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    padding-top: 84px;
+    padding-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 133px; //7%
+    padding-bottom: 48px; //2.5
+  }
 }
-.wrapper {
-  background-color: var(--first-accent-color);
-  width: 50%;
-  text-align: right;
-  padding-right: 68px;
-  padding-top: 28px;
-  padding-bottom: 26px;
-  margin-bottom: 54px;
-}
+
 .description-header {
   font-family: var(--headers-font), sans-serif;
-  font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+  margin-bottom: 24px;
+  font-size: 21px;
+  line-height: 1.2;
+  height: 79px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  @media screen and (min-width: 480px) {
+    font-size: 21px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 54px;
+    font-size: 34px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 2.08vw;
+    justify-content: start;
+    
+  }
+  &::before {
+    content: '';
+    display: block;
+    background: linear-gradient(90deg, rgba(237, 36, 40, 1) 100%, rgba(0, 0, 0, 1) 100%);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 100vw;
+    height: 79px;
+    @media screen and (min-width: 768px) {
+      background: linear-gradient(90deg, rgba(237, 36, 40, 1) 90%, rgba(0, 0, 0, 1) 90%);
+    }
+    @media screen and (min-width: 1200px) {
+      background: linear-gradient(90deg, rgba(237, 36, 40, 1) 50%, rgba(0, 0, 0, 1) 50%);
+      height: 4.11vw;
+    }
+  }
 }
 .descr-list {
-  display: flex;
-  justify-content: center;
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
   .descr-item {
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 2;
     font-weight: 400;
-    width: 690px;
+    @media screen and (min-width: 768px) {
+      font-size: 20px;
+    }
+    
+    
     .descr-link {
       text-decoration: underline;
       color: #ac2991;
     }
   }
   .descr-item:first-child {
-    margin-right: 85px;
+    @media screen and (min-width: 768px) {
+      margin-right: 50px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 85px;
+    }
+    
   }
 }
