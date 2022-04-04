@@ -1,6 +1,6 @@
 .backdrop {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: var(--primary-bg-color);
   position: fixed;
   top: 0;
@@ -42,7 +42,7 @@
   
   display: flex;
   align-items: center;
-  padding-left: 54px;
+  // padding-left: 54px;
   
   @media screen and (min-width: 768px) {
     right: 20px;
@@ -53,11 +53,17 @@
   }
 }
 .modal-close {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   border: 2px solid #ffffff;
   background-color: #ac2991;
-
+  position: absolute;
+  left: 15px;
+  @media screen and (min-width: 480px) {
+    width: 40px;
+    height: 40px;
+    left: 54px;
+  }
   img {
     width: 12px;
     height: 18px;
@@ -66,31 +72,43 @@
 }
 .modal-header {
   font-family: var(--headers-font), sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 40px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  margin-left: 68px;
+  // margin-left: 68px;
+  width: 100%;
+      text-align: center;
   @media screen and (min-width: 768px) {
     font-size: 50px;
-    margin-left: 68px;
+    // margin-left: 68px;
   }
   @media screen and (min-width: 1200px) {
     font-size: 68px;
     line-height: 102px;
-    margin-left: 172px;
+    // margin-left: 172px;
+    text-align: center;
   }
 }
-.modal-header::after {
+.form-header::after {
   position: absolute;
   content: '';
   background-image: url("../../images/face.png");
   background-size: contain;
   background-repeat: no-repeat;
+  
   width: 93px;
   height: 92px;
+  
   bottom: 67px;
+  @media screen and (max-width: 479px) {
+    width: 72px;
+    height: 72px;
+    right: 1px;
+    bottom: 67px;
+    
+  }
 }
 // .modal-face-img {
 //   width: 76px;
@@ -108,15 +126,19 @@
 // }
 .modal-descr {
   font-family: var(--headers-font), sans-serif;
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
   @media screen and (min-width: 768px) {
     font-size: 32px;
-    line-height: 140px;
+    // line-height: 140px;
+    margin-top: 54px;
+    margin-bottom: 54px;
   }
   @media screen and (min-width: 1200px) {
     font-size: 40px;
@@ -168,7 +190,7 @@
   button {
     height: 70px;
     background-color: #4823c7;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.075em;
@@ -178,6 +200,7 @@
     
     @media screen and (min-width: 768px) {
       width: 580px;
+      font-size: 20px;
     }
     @media screen and (min-width: 1200px) {
       width: 935px;

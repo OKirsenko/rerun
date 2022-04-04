@@ -57,6 +57,10 @@ body {
   background-color: var(--primary-bg-color);
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   width: 100vw;
   margin: 0 auto;
@@ -697,8 +701,8 @@ body {
 }
 
 .backdrop {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: var(--primary-bg-color);
   position: fixed;
   top: 0;
@@ -748,7 +752,6 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 54px;
 }
 
 @media screen and (min-width: 768px) {
@@ -765,10 +768,20 @@ body {
 }
 
 .modal-close {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   border: 2px solid #ffffff;
   background-color: #ac2991;
+  position: absolute;
+  left: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-close {
+    width: 40px;
+    height: 40px;
+    left: 54px;
+  }
 }
 
 .modal-close img {
@@ -779,18 +792,18 @@ body {
 
 .modal-header {
   font-family: var(--headers-font), sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 40px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  margin-left: 68px;
+  width: 100%;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   .modal-header {
     font-size: 50px;
-    margin-left: 68px;
   }
 }
 
@@ -798,11 +811,11 @@ body {
   .modal-header {
     font-size: 68px;
     line-height: 102px;
-    margin-left: 172px;
+    text-align: center;
   }
 }
 
-.modal-header::after {
+.form-header::after {
   position: absolute;
   content: '';
   background-image: url("../../images/face.png");
@@ -813,20 +826,32 @@ body {
   bottom: 67px;
 }
 
+@media screen and (max-width: 479px) {
+  .form-header::after {
+    width: 72px;
+    height: 72px;
+    right: 1px;
+    bottom: 67px;
+  }
+}
+
 .modal-descr {
   font-family: var(--headers-font), sans-serif;
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
   .modal-descr {
     font-size: 32px;
-    line-height: 140px;
+    margin-top: 54px;
+    margin-bottom: 54px;
   }
 }
 
@@ -904,7 +929,7 @@ body {
 .modal-form button {
   height: 70px;
   background-color: #4823c7;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.075em;
@@ -916,6 +941,7 @@ body {
 @media screen and (min-width: 768px) {
   .modal-form button {
     width: 580px;
+    font-size: 20px;
   }
 }
 
@@ -941,16 +967,25 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.age-descr {
-  font-size: 68px;
-  line-height: 102px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+.modal-age::after {
+  content: '';
+  background-image: url("../../images/face.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 86px;
+  height: 80px;
+  right: 40px;
+  bottom: 36px;
 }
 
-.age-header {
-  margin-left: 280px;
+@media screen and (min-width: 1200px) {
+  .modal-age::after {
+    width: 131px;
+    height: 122px;
+    right: 65px;
+    bottom: 53px;
+  }
 }
 
 .btn-wrap {
@@ -972,8 +1007,11 @@ body {
 }
 
 .btn-wrap .age-btn:first-child {
-  background-color: #4823c7;
   margin-right: 20px;
+}
+
+.btn-wrap .age-btn:hover, .btn-wrap .age-btn:focus {
+  background-color: #4823c7;
 }
 
 .modal-age-img {

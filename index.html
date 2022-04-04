@@ -7,7 +7,7 @@
     <title>Rerun</title>
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body>
+  <body class="blocked-body">
     <div class="container">
       <header class="header">
         <img src="./images/logo.png" alt="logo" class="header-logo" />
@@ -146,13 +146,13 @@
         <p>©2021 RERUN</p>
       </div>
     </footer>
-    <div class="backdrop js-modal">
+    <div class="backdrop js-modal is-hidden">
       <div class="modal">
         <div class="modal-header-wrap">
           <button class="modal-close js-modal-close">
             <img src="./images/icons/arrow_button.png" />
           </button>
-          <h2 class="modal-header">competition 420</h2>
+          <h2 class="modal-header form-header">competition 420</h2>
           <!-- <img src="./images/face.png" class="modal-face-img" /> -->
         </div>
         <p class="modal-descr">fill in the details below</p>
@@ -168,20 +168,19 @@
       </div>
     </div>
 
-    <div class="backdrop-age js-modal-age is-hidden">
+    <div class="backdrop-age js-modal-age">
       <div class="modal modal-age">
         <div class="modal-header-wrap">
           <button class="modal-close">
             <img src="./images/icons/arrow_button.png" />
           </button>
-          <h2 class="modal-header age-header">are you</h2>
+          <h2 class="modal-header">are you</h2>
         </div>
-        <p class="modal-descr age-descr">21 years old?</p>
+        <p class="modal-header">21 years old?</p>
         <div class="btn-wrap">
           <button class="age-btn js-age-close">yes</button>
           <button class="age-btn">no</button>
         </div>
-        <img src="./images/face.png" class="modal-age-img" />
       </div>
     </div>
 
