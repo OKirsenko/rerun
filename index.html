@@ -7,7 +7,8 @@
     <title>Rerun</title>
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body class="blocked-body">
+  <!-- <body class="blocked-body"> -->
+  <body>
     <div class="container">
       <header class="header">
         <img src="./images/logo.png" alt="logo" class="header-logo" />
@@ -16,21 +17,21 @@
     <main>
       <section class="hero-section">
         <div class="container hero-container">
-          <ul class="timer-list">
+          <ul class="timer-list js-timer">
             <li class="timer-item">
-              <span class="number">419</span>
+              <span class="number" id="days">419</span>
               <span class="timer-type">days</span>
             </li>
             <li class="timer-item">
-              <span class="number">23</span>
+              <span class="number" id="hours">23</span>
               <span class="timer-type">Hours</span>
             </li>
             <li class="timer-item">
-              <span class="number">55</span>
+              <span class="number" id="minutes">55</span>
               <span class="timer-type">Minutes</span>
             </li>
             <li class="timer-item">
-              <span class="number">25</span>
+              <span class="number" id="seconds">25</span>
               <span class="timer-type">Seconds</span>
             </li>
           </ul>
@@ -73,13 +74,15 @@
       </section>
       <section class="best-section">
         <div class="bg-wrapper">
-          <div class="best-img">
-            <img src="./images/img.jpg" alt="happy people" class="js-modal-open" />
-          </div>
-          <div class="header-wrap">
-            <h2 class="best-header">
-              <span class="header-accent">Best of luck</span> and let the games begin!
-            </h2>
+          <div class="modal-open-wrap js-modal-open">
+            <div class="best-img js-hover">
+              <img src="./images/best-img.jpg" alt="happy people" />
+            </div>
+            <div class="header-wrap js-hover">
+              <h2 class="best-header">
+                <span class="header-accent">Best of luck</span> and let the games begin!
+              </h2>
+            </div>
           </div>
           <div class="bg-left">
             <img src="./images/aside-left.png" alt="aside-bg" />
@@ -119,17 +122,23 @@
           <ul class="social-list">
             <li class="social-item">
               <a href="" class="social-link">
-                <img src="./images/icons/tik-tok.png" alt="tik-tok" />
+                <svg width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-tiktok" class="social-icon"></use>
+                </svg>
               </a>
             </li>
             <li class="social-item">
               <a href="" class="social-link">
-                <img src="./images/icons/instagram.png" alt="instagram" />
+                <svg width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-instagram" class="social-icon"></use>
+                </svg>
               </a>
             </li>
             <li class="social-item">
               <a href="" class="social-link">
-                <img src="./images/icons/facebook.png" alt="facebook" />
+                <svg width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-facebook" class="social-icon"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -167,7 +176,7 @@
       </div>
     </div>
 
-    <div class="backdrop-age js-modal-age">
+    <div class="backdrop-age js-modal-age is-hidden">
       <div class="modal modal-age">
         <div class="modal-header-wrap">
           <button class="modal-close">
@@ -183,6 +192,6 @@
       </div>
     </div>
 
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

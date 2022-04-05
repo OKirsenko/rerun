@@ -1,21 +1,29 @@
 .best-section {
   padding-bottom: 116px;
   position: relative;
+  text-align: center;
 }
-
-
+.modal-open-wrap {
+  display: inline-block;
+  cursor: pointer;
+}
+.header-wrap.wrap-hover,
+.best-img.wrap-hover {
+  border-color:  var(--first-accent-color) ;
+}
 .best-img {
   max-width: 240px;
   margin: 0 auto;
   position: relative;
   top: 50px;
   z-index: 1;
-  cursor: pointer;
+  border: 10px solid #ffffff;
   @media screen and (min-width: 480px) {
     max-width: 300px;
   }
   
   @media screen and (min-width: 768px) {
+    border: 20px solid #ffffff;
     max-width: 360px;
     top: 90px;
   }
@@ -26,6 +34,7 @@
   img {
     width: 100%
   }
+  
 }
 .header-wrap {
 
