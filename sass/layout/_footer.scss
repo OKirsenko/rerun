@@ -72,12 +72,17 @@
     justify-content: center;
     .social-item {
       margin-right: 24px;
-      .social-icon {
-        fill: #ffffff;
-        &:hover, 
-        &:focus {
+      width: 24px;
+      height: 24px;
+      &:hover,
+      &:focus {
+        .social-icon {
           fill: var(--first-accent-color);
         }
+        
+      }
+      .social-icon {
+        fill: #ffffff;
       }
       &:last-child {
         margin-right: 0;

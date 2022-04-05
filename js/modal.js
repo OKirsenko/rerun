@@ -33,5 +33,3 @@ function onFormSubmit(e) {
 function onHover() {
   refs.hoverEl.forEach(el => el.classList.toggle('wrap-hover'));
 }
-
-// export { closeModalAge, toggleModal, onFormSubmit, onHover };

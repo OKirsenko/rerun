@@ -253,12 +253,6 @@ button {
   margin-right: 0;
 }
 
-.flip {
-  transform-origin: center top;
-  animation-fill-mode: both;
-  animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1);
-}
-
 .hero-header {
   font-family: var(--headers-font);
   font-size: 7vw;
@@ -663,14 +657,16 @@ button {
 
 .footer-social .social-list .social-item {
   margin-right: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer-social .social-list .social-item:hover .social-icon, .footer-social .social-list .social-item:focus .social-icon {
+  fill: var(--first-accent-color);
 }
 
 .footer-social .social-list .social-item .social-icon {
   fill: #ffffff;
-}
-
-.footer-social .social-list .social-item .social-icon:hover, .footer-social .social-list .social-item .social-icon:focus {
-  fill: var(--first-accent-color);
 }
 
 .footer-social .social-list .social-item:last-child {
