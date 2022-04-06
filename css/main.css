@@ -158,24 +158,16 @@ button {
 }
 
 .timer-list .timer-item {
-  width: 26px;
-  height: 23px;
+  width: 42px;
+  height: 37px;
   margin-right: 10px;
   background-color: var(--secondary-bg-color);
   color: var(--secondary-text-color);
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (min-width: 480px) {
-  .timer-list .timer-item {
-    border-radius: 10px;
-    width: 42px;
-    height: 37px;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -193,17 +185,11 @@ button {
 }
 
 .timer-list .timer-item .number {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-}
-
-@media screen and (min-width: 480px) {
-  .timer-list .timer-item .number {
-    font-size: 16px;
-  }
 }
 
 @media screen and (min-width: 768px) {
